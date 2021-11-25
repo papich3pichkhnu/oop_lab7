@@ -160,6 +160,7 @@
     <ClInclude Include="Faculty.h" />
     <ClInclude Include="GraduateStudent.h" />
     <ClInclude Include="Lecturer.h" />
+    <ClInclude Include="myfunctors.h" />
     <ClInclude Include="Person.h" />
     <ClInclude Include="SeniorLecturer.h" />
     <ClInclude Include="Student.h" />
