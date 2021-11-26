@@ -394,10 +394,17 @@ int main()
 	// find converts vstud.begin() and vstud.end() in InputIterator, so they can't modify elements from iterators;
 	move(vstud.begin() + 2, vstud.end(), vstud.begin());
 	// find converts      this iterator    ^  in OutputIterator, so it can replace element from iterator;
-	for (Student* st : vstud)
+	for (vector<Student*>::iterator st=vstud.begin();st!=vstud.end();st++)
 	{
-		cout << *st << endl;
+		cout << **st << endl;
+		
 	}
+	cout << endl;
+	for (vector<Student*>::reverse_iterator st = vstud.rbegin(); st != vstud.rend(); st++)
+	{
+		cout << **st << endl;
+	}
+	cout << endl;
 	cout << "/***replace**/" << endl;
 	replace(vstud.begin(), vstud.end(), vstud[0], item);
 	//replace converts iterators in ForwardIterator, they can assign and access values
@@ -413,9 +420,10 @@ int main()
 		list_lecturers.push_front(st);
 	}
 	cout << "/***list**/" << endl;
-	for (Lecturer* le : list_lecturers)
+	for (list<Lecturer*>::iterator it = list_lecturers.begin(); it!=list_lecturers.end();it++)
 	{
-		cout << *le << endl;
+		
+		cout << **it<< endl;
 	}
 	list<Lecturer*>::iterator it=list_lecturers.begin();
 	for (int i = 0; i < 4; i++)
